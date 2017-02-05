@@ -1,0 +1,103 @@
+/* line 1, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block {
+  background-color: #F9F9F9;
+  width: 400px;
+  float: left;
+  height: 100%;
+  border-right: 2px solid #266C95;
+  position: fixed;
+  overflow-y: scroll;
+}
+/* line 9, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list {
+  padding: 10px;
+}
+/* line 11, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .title {
+  width: 100%;
+  float: left;
+  text-transform: uppercase;
+  color: #373737;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+/* line 20, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .add-btn {
+  padding: 5px;
+  display: block;
+  border-radius: 4px;
+  float: left;
+  border: 1px solid gray;
+  color: #818181;
+}
+/* line 27, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .add-btn span {
+  margin-right: 5px;
+}
+/* line 31, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group {
+  margin-top: 10px;
+  width: 100%;
+  float: left;
+  border-radius: 0;
+}
+/* line 36, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* line 41, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item .remove,
+.areas-list-block .places-list .list-group .list-group-item .edit {
+  position: absolute;
+  background-color: #000;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  z-index: 999;
+  display: table;
+}
+/* line 51, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item .remove i,
+.areas-list-block .places-list .list-group .list-group-item .edit i {
+  color: #fff;
+  font-size: 1.6rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 58, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item .remove {
+  top: -13px;
+  right: 5px;
+}
+/* line 62, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item .edit {
+  top: -13px;
+  right: 35px;
+}
+/* line 66, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item .area-info {
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+/* line 70, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item .area-info > i {
+  color: #F0C10E;
+  float: left;
+  margin-right: 10px;
+}
+/* line 75, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item .area-info ul {
+  float: left;
+  color: #909090;
+}
+/* line 77, ../../sass/Pages/areas-list/partials/_places-list.scss */
+.areas-list-block .places-list .list-group .list-group-item .area-info ul li:first-child {
+  font-size: 1.6rem;
+  color: #000;
+}

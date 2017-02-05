@@ -1,0 +1,34 @@
+/* line 1, ../../sass/Pages/input-values/partials/_input-form.scss */
+.input-values-block {
+  display: fixed;
+  background-color: #F9F9F9;
+  width: 400px;
+  float: left;
+  height: 100%;
+  border-right: 2px solid #266C95;
+  padding: 10px 20px 10px 10px;
+  overflow-y: scroll;
+}
+/* line 10, ../../sass/Pages/input-values/partials/_input-form.scss */
+.input-values-block .title {
+  width: 100%;
+  float: left;
+  text-transform: uppercase;
+  color: #373737;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+/* line 20, ../../sass/Pages/input-values/partials/_input-form.scss */
+.input-values-block label > span {
+  margin-left: 5px;
+  color: #C9DAE5;
+  font-size: 1.2rem;
+}
+/* line 27, ../../sass/Pages/input-values/partials/_input-form.scss */
+.input-values-block button[type=submit] {
+  background-color: #313435;
+  border-radius: 10px;
+  color: #fff;
+  padding: 5px 10px;
+}

@@ -1,0 +1,286 @@
+/* line 1, ../../sass/Pages/index/partials/_input-place.scss */
+.input-place {
+  height: 30%;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  background-image: url(../../img/top.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* line 1, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category {
+  width: 100%;
+  float: left;
+  height: 15%;
+  display: table;
+}
+/* line 6, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+/* line 11, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li {
+  height: 100%;
+  display: inline;
+}
+/* line 14, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li a {
+  display: table;
+  height: 100%;
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  border-right: 1px solid lightgray;
+}
+/* line 21, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li a i {
+  width: 100%;
+  margin: 10px 0;
+}
+/* line 25, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li a span {
+  width: 100%;
+  font-weight: 500;
+}
+/* line 30, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li a.active {
+  background-color: #E3E9CF;
+}
+/* line 33, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li div {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 40, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li:nth-child(1) div > i {
+  color: #4DA916;
+}
+/* line 45, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li:nth-child(2) div > i {
+  color: #CC3637;
+}
+/* line 50, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li:nth-child(3) div > i {
+  color: #3185FF;
+}
+/* line 55, ../../sass/Pages/index/partials/_search-category.scss */
+.search-category ul li:last-child a {
+  border: 0;
+}
+
+/* line 1, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list {
+  height: 45%;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  border-top: 1px solid lightgray;
+}
+/* line 7, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .progress {
+  height: 10px;
+  border-radius: 0px;
+  background-color: #FFF;
+  box-shadow: none;
+  margin: 0;
+}
+/* line 14, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul {
+  height: 100%;
+}
+/* line 16, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li {
+  width: 100%;
+  overflow: hidden;
+}
+/* line 20, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li i {
+  margin-right: 10px;
+  color: #777;
+}
+/* line 24, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li #analyse {
+  display: none;
+}
+/* line 28, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li #filter > ul {
+  padding-left: 15px;
+}
+/* line 30, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li #filter > ul > li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: table;
+  padding: 5px 0;
+}
+/* line 35, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li #filter > ul > li input {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 40, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li #filter > ul > li ul {
+  padding-left: 15px;
+}
+/* line 42, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li #filter > ul > li ul li {
+  font-weight: 400;
+  padding: 2px 0;
+}
+/* line 50, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list > ul li span {
+  text-indent: 5px;
+  font-weight: bold;
+}
+/* line 56, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse {
+  width: 100%;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+/* line 61, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse tr td {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+}
+/* line 68, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse thead tr td:nth-child(2),
+.indicators-list .analyse thead tr td:nth-child(3),
+.indicators-list .analyse tbody tr td:nth-child(2),
+.indicators-list .analyse tbody tr td:nth-child(3) {
+  text-align: center;
+}
+/* line 75, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse thead tr td {
+  color: gray;
+}
+/* line 82, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse tbody tr td {
+  width: 25%;
+  padding: 3px 0;
+}
+/* line 85, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse tbody tr td .progress {
+  padding: 0 10px;
+}
+/* line 89, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse tbody tr td:nth-child(4) {
+  border-top: 0;
+  width: 50px;
+  vertical-align: middle;
+  padding: 0 5px;
+  align: center;
+}
+/* line 98, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse tbody tr:last-child td {
+  border-bottom: 1px solid #ddd;
+}
+/* line 101, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .analyse tbody tr:last-child td:nth-child(4) {
+  border-bottom: 0;
+}
+/* line 107, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+/* line 111, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion .title {
+  margin: 5px 0;
+}
+/* line 113, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion .title span {
+  font-size: 1.6rem;
+  color: lightgreen;
+}
+/* line 118, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion .detail-description-btns {
+  padding: 10px 0;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+/* line 123, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion .detail-description-btns button {
+  height: 25px;
+  float: left;
+  border-radius: 3px;
+}
+/* line 128, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion .detail-description-btns #detail-description-btn {
+  background-color: #3185FF;
+  margin-right: 10px;
+  color: #fff;
+}
+/* line 132, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion .detail-description-btns #detail-description-btn i {
+  color: #fff;
+}
+/* line 136, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion .detail-description-btns #recomendation-btn {
+  background-color: #FFF;
+  border: 1px solid lightgray;
+  color: #000;
+}
+/* line 140, ../../sass/Pages/index/partials/_indicators-list.scss */
+.indicators-list .conclusion .detail-description-btns #recomendation-btn i {
+  color: #000;
+}
+
+/* line 1, ../../sass/Pages/index/partials/_site-footer.scss */
+.site-footer {
+  overflow: hidden;
+  float: left;
+  width: 100%;
+  height: 10%;
+}
+/* line 6, ../../sass/Pages/index/partials/_site-footer.scss */
+.site-footer .site-nav {
+  width: 100%;
+  float: left;
+  height: 50%;
+  overflow: hidden;
+  padding: 5% 0;
+}
+/* line 12, ../../sass/Pages/index/partials/_site-footer.scss */
+.site-footer .site-nav ul {
+  width: 100%;
+}
+/* line 14, ../../sass/Pages/index/partials/_site-footer.scss */
+.site-footer .site-nav ul li {
+  display: inline !important;
+}
+/* line 16, ../../sass/Pages/index/partials/_site-footer.scss */
+.site-footer .site-nav ul li a {
+  color: #777;
+  margin-right: 10px;
+}
+/* line 20, ../../sass/Pages/index/partials/_site-footer.scss */
+.site-footer .site-nav ul li a:first-child {
+  margin-left: 10px;
+}
+/* line 26, ../../sass/Pages/index/partials/_site-footer.scss */
+.site-footer footer {
+  height: 50%;
+  width: 100%;
+  float: left;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* line 7, ../../sass/Pages/index.scss */
+.search-container {
+  height: 100%;
+  width: 410px;
+  position: fixed;
+  overflow: hidden;
+  border-right: 1px solid lightgray;
+}

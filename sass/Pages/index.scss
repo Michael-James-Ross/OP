@@ -1,0 +1,13 @@
+@import "../site/modules/_global_variables";
+@import "index/partials/_input-place";
+@import "index/partials/_search-category";
+@import "index/partials/_indicators-list";
+@import "index/partials/_site-footer";
+
+.search-container {
+    height: 100%;
+    width: 410px;
+    position: fixed;
+    overflow: hidden;
+    border-right: 1px solid lightgray;
+}
