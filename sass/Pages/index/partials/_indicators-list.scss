@@ -11,20 +11,58 @@
         box-shadow: none;
         margin: 0;
     }
+    .content{
+        display: none;
+    }
     >ul {
         height: 100%;
         li {
             //padding: 7px;
             width: 100%;
-            overflow: hidden;
-            i {
+            //overflow: hidden;
+            > i {
                 margin-right: 10px;
                 color: #777;
             }
+            > span{
+                cursor: pointer;
+                font-size: 1.6rem;
+            }
+
             #analyse {
                 display: none;
             }
+            #input {
+                display: none;
+            }
+            #legend {
+                padding-left: 10px;
+                table {
+                    width: auto;
+                    margin-bottom: 0;
+                    margin-left: 10px;
+                    tr {
+                        td {
+                            padding: 2.5px 5px;
+                            border: 0;
+                            vertical-align: middle;
+                            .indicator {
+                                width: 15px;
+                                height: 15px;
+                                border: 1px solid black;
+                            }
+                            i{
+                                color: black;
+                            }
+                            strong{
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
             #filter {
+                display: none;
                 > ul {
                     padding-left: 15px;
                     > li {
@@ -143,4 +181,5 @@
             }
         }
     }
+
 }

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/libs/jquery.mCustomScrollbar.min.css">
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -16,20 +17,25 @@
     <div class="container-fluid">
       <div class="row">
         <aside class="search-container">
-          <div class="input-place"></div>
+          <div class="input-place">
+            <div class="form-group">
+              <input type="text" id="usr" class="form-control">
+            </div>
+          </div>
+          <div class="city-info"><span>Рівне</span><span>Рівненська область</span></div>
           <div class="search-category">
             <ul>
-              <li><a class="active">
+              <li><a class="active.suitability">
                   <div><i class="fa fa-leaf fa-2x"></i><span>Придатність до органіки</span></div></a></li>
-              <li><a>
-                  <div><i class="fa fa-bar-chart fa-2x"></i><span>Інтегральний показник</span></div></a></li>
+              <li><a class=".help-info">
+                  <div><i class="fa fa-question-circle-o fa-2x"></i><span>Довідкова інформація</span></div></a></li>
               <li><a>
                   <div><i class="fa fa-suitcase fa-2x"></i><span>Економічна ефктивність</span></div></a></li>
             </ul>
           </div>
           <div class="indicators-list">
             <ul>
-              <div class="modal-body">
+              <div id="suitability" class="modal-body">
                 <li><i aria-hidden="true" class="fa fa-angle-right"> </i><span>Аналіз показників</span>
                   <div id="analyse" class="content">
                     <table class="table analyse">
@@ -246,43 +252,313 @@
                     </ul>
                   </div>
                 </li>
-                <li><i aria-hidden="true" class="fa fa-angle-right"> </i><span>Введення показників
-                    <div id="input" class="content">
-                      <table class="table analyse">
-                        <thead>
-                          <tr>
-                            <td>Показник</td>
-                            <td>Значення</td>
-                            <td>Од. виміру</td>
-                            <td></td>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>pH грунту</td>
-                            <td> 
-                              <input type="number">
-                            </td>
-                            <td>Од. pH</td>
-                            <td> 
-                              <div class="progress">
-                                <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar"><span class="sr-only">60% Complete</span></div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>pH грунту</td>
-                            <td>5.1</td>
-                            <td>Од. pH</td>
-                            <td> 
-                              <div class="progress">
-                                <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar"><span class="sr-only">60% Complete</span></div>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div></span></li>
+                <li><i aria-hidden="true" class="fa fa-angle-right"> </i><span>Введення показників</span>
+                  <div id="input" class="content">
+                    <table class="table analyse">
+                      <thead>
+                        <tr>
+                          <td>Показник</td>
+                          <td>Значення</td>
+                          <td>Од. виміру</td>
+                          <td></td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>pH грунту</td>
+                          <td> 
+                            <input type="number">
+                          </td>
+                          <td>Од. pH</td>
+                          <td> 
+                            <div class="progress">
+                              <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar"><span class="sr-only">60% Complete</span></div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>pH грунту</td>
+                          <td>5.1</td>
+                          <td>Од. pH</td>
+                          <td> 
+                            <div class="progress">
+                              <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar"><span class="sr-only">60% Complete</span></div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li>
+                <li> <i aria-hidden="true" class="fa fa-angle-right"> </i><span>Легенда</span>
+                  <div id="legend" class="content">
+                    <ul>
+                      <li> <i aria-hidden="true" class="fa fa-angle-right"> </i><i>Реакція грунтового розчину</i>
+                        <div class="content">
+                          <table class="table">
+                            <tr>
+                              <td>
+                                <div style="background-color:#C8FEC5" class="indicator"></div>
+                              </td>
+                              <td> <i>близькі до нейтральних</i></td>
+                              <td> <strong>5,6 - 6,0 (pHсол.)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#80CD7F" class="indicator"></div>
+                              </td>
+                              <td> <i>нейтральні</i></td>
+                              <td><strong>6,1 - 7,0 (pHсол.)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#89FBFB" class="indicator"></div>
+                              </td>
+                              <td> <i>слаболужні</i></td>
+                              <td> <strong>7,1 - 7,5 (pHсол.)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#807DFD" class="indicator"></div>
+                              </td>
+                              <td> <i>середньолужні</i></td>
+                              <td> <strong>7,6 - 8,0 (pHсол.)</strong></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </li>
+                      <li> <i aria-hidden="true" class="fa fa-angle-right"> </i><i>Вміст рухомого фосфору</i>
+                        <div class="content">
+                          <table class="table">
+                            <tr>
+                              <td>
+                                <div style="background-color:#D43733" class="indicator"></div>
+                              </td>
+                              <td> <i>дуже низький</i></td>
+                              <td> <strong>&lt; 26 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#E4C58C" class="indicator"></div>
+                              </td>
+                              <td> <i>низький</i></td>
+                              <td> <strong>26-50 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#FDFD7A" class="indicator"></div>
+                              </td>
+                              <td> <i>середній</i></td>
+                              <td> <strong>51-100 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#73FC70" class="indicator"></div>
+                              </td>
+                              <td> <i>підвищений</i></td>
+                              <td> <strong>101-150 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#8EFCFD" class="indicator"></div>
+                              </td>
+                              <td><i>високий</i></td>
+                              <td> <strong>151-250 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#A8A9C8" class="indicator"></div>
+                              </td>
+                              <td><i>дуже високий</i></td>
+                              <td> <strong>&gt; 250 (мг/кг)</strong></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </li>
+                      <li> <i aria-hidden="true" class="fa fa-angle-right"> </i><i>Групування за кислотністю</i>
+                        <div class="content">
+                          <table class="table">
+                            <tr>
+                              <td>
+                                <div style="background-color:#CF2824" class="indicator"></div>
+                              </td>
+                              <td> <i>дуже сильнокислі</i></td>
+                              <td> <strong>&lt; 4,1 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#E0AACA" class="indicator"></div>
+                              </td>
+                              <td> <i>сильнокислі</i></td>
+                              <td> <strong>4,1-4,5 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#EAD092" class="indicator"></div>
+                              </td>
+                              <td> <i>середньокислі</i></td>
+                              <td> <strong>4,6-5,0 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#F5F67C" class="indicator"></div>
+                              </td>
+                              <td> <i>слабокислі</i></td>
+                              <td> <strong>5,1-5,5 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#B2F1B0" class="indicator"></div>
+                              </td>
+                              <td> <i>близькі до нейтральних</i></td>
+                              <td> <strong>5,6-6,0 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#79B877" class="indicator"></div>
+                              </td>
+                              <td> <i>нейтральні</i></td>
+                              <td> <strong>6,1-7,0 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#7DE8E8" class="indicator"></div>
+                              </td>
+                              <td> <i>слаболужні</i></td>
+                              <td> <strong>7,1-7,5 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#8B8ACC" class="indicator"></div>
+                              </td>
+                              <td> <i>середньолужні</i></td>
+                              <td> <strong>7,6-8,0 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#D8B7D9" class="indicator"></div>
+                              </td>
+                              <td> <i>сильнолужні</i></td>
+                              <td> <strong>8,1-8,5 (pHксI)</strong></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div style="background-color:#CDB789" class="indicator"></div>
+                              </td>
+                              <td> <i>дуже сильнолужні</i></td>
+                              <td> <strong>&gt; 8,5 (pHксI)</strong></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </li>
+                      <li> <i aria-hidden="true" class="fa fa-angle-right"> </i><i>Вміст лужногідролізованого азоту(N)</i>
+                        <div class="content">
+                          <table class="table">
+                            <tr>
+                              <td>
+                                <div style="background-color:#D78E8D" class="indicator"></div>
+                              </td>
+                              <td> <i>дуже низький</i></td>
+                              <td> <strong>&lt; 101 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#F6F67C" class="indicator"></div>
+                              </td>
+                              <td> <i>низький</i></td>
+                              <td><strong>101-150 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#F6F67C" class="indicator"></div>
+                              </td>
+                              <td> <i>середній</i></td>
+                              <td> <strong>151 - 200 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#53A551" class="indicator"></div>
+                              </td>
+                              <td> <i>підвищений</i></td>
+                              <td> <strong>&gt; 200 (мг/кг)</strong></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </li>
+                      <li> <i aria-hidden="true" class="fa fa-angle-right"> </i><i>Вміст обмінного калію(K)</i>
+                        <div class="content">
+                          <table class="table">
+                            <tr>
+                              <td>
+                                <div style="background-color:#FECD98" class="indicator"></div>
+                              </td>
+                              <td> <i>низький</i></td>
+                              <td> <strong>41-80 (мг/кг)</strong></td>
+                            </tr>
+                            <tr>
+                              <td> 
+                                <div style="background-color:#FEFE6D" class="indicator"></div>
+                              </td>
+                              <td> <i>середній</i></td>
+                              <td><strong>81-120 (мг/кг)</strong></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li> <i aria-hidden="true" class="fa fa-angle-right"> </i><span>Ділянки</span>
+                  <div id="fields" class="content areas-list-block">
+                    <div class="places-list"><a class="add-btn"><span>+</span>Додати</a>
+                      <ul class="list-group">
+                        <li class="list-group-item"><a class="remove"><i class="fa fa-times"></i></a><a class="edit"><i class="fa fa-pencil"></i></a>
+                          <div class="area-info"><i class="fa fa-map-marker fa-2x"></i>
+                            <ul>
+                              <li>Zone 1</li>
+                              <li><i class="fa fa-user"> </i><strong>admin@gmail.com</strong><i class="fa fa-calendar"> </i><strong>22/11/2016</strong></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="list-group-item"><a class="remove"><i class="fa fa-times"></i></a><a class="edit"><i class="fa fa-pencil"></i></a>
+                          <div class="area-info"><i class="fa fa-map-marker fa-2x"></i>
+                            <ul>
+                              <li>Zone 1</li>
+                              <li><i class="fa fa-user"> </i><strong>admin@gmail.com</strong><i class="fa fa-calendar"> </i><strong>22/11/2016     </strong></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="list-group-item"><a class="remove"><i class="fa fa-times"></i></a><a class="edit"><i class="fa fa-pencil"></i></a>
+                          <div class="area-info"><i class="fa fa-map-marker fa-2x"></i>
+                            <ul>
+                              <li>Zone 1</li>
+                              <li><i class="fa fa-user"> </i><strong>admin@gmail.com</strong><i class="fa fa-calendar"> </i><strong>22/11/2016</strong></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="list-group-item"><a class="remove"><i class="fa fa-times"></i></a><a class="edit"><i class="fa fa-pencil"></i></a>
+                          <div class="area-info"><i class="fa fa-map-marker fa-2x"></i>
+                            <ul>
+                              <li>Zone 1</li>
+                              <li><i class="fa fa-user"> </i><strong>admin@gmail.com</strong><i class="fa fa-calendar"> </i><strong>22/11/2016     </strong></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <div id="help-info" class="modal-body">
+                <li><i aria-hidden="true" class="fa fa-angle-right"> </i><span>Технологія</span>
+                  <div class="content"></div>
+                </li>
+                <li><i aria-hidden="true" class="fa fa-angle-right"> </i><span>Сертифікація</span>
+                  <div class="content"></div>
+                </li>
+                <li><i aria-hidden="true" class="fa fa-angle-right"> </i><span>Переробка</span>
+                  <div class="content"></div>
+                </li>
               </div>
             </ul>
           </div>
